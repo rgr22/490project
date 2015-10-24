@@ -1,8 +1,5 @@
 #!/usr/bin/php
-
 <?php
-
-//this is the script we looked today at school
 require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
@@ -18,13 +15,11 @@ function getData()
 	//var_dump($arrayCode);
 	$connection = new MongoClient( "mongodb://test:test@ds039504.mongolab.com:39504/thetop" );
 	$mongodb = $connection->selectDB('thetop');
-	$collection = new MongoCollection($mongodb,'teams');
+	$collection = new MongoCollection($mongodb,'test');
 	var_dump($connection);
 	var_dump($collection);
-	//$collection->insert(array($arrayCode));
+	$collection->insert(array($arrayCode));
 
-	$cursor = $collection -> find(array("name"));
-	foreach ($cursor as $doc)
 	{
  	 var_dump($doc);
 	}
