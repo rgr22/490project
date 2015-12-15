@@ -21,4 +21,4 @@
 # 
 # m h  dom mon dow   command
 
-0 19 * * 5 php /home/robin/Documents/teams.php
+*/5 * * * * php /home/robin/Documents/weatherData.php
