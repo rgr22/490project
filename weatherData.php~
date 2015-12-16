@@ -158,7 +158,7 @@ $collection->insert(array($mongo_array));
 
 
 
-/*
+
 {
   var_dump($doc);
 }
